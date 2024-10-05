@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flag of Azerbaijan</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="flag_colours">
+        <div class="blue"></div>
+        <div class="red">
+            <!-- Canvas for Crescent -->
+            <canvas class="crescent" id="crescentCanvas"></canvas>
+            <canvas class="star" id="myCanvas"></canvas>
+        </div>
+        <div class="green"></div>
+    </div>
+
+    <script>
+        // Crescent Drawing
+        const crescentCanvas = document.getElementById('crescentCanvas');
+        crescentCanvas.width = 80;
+        crescentCanvas.height = 80;
+        const crescentCtx = crescentCanvas.getContext('2d');
+        
+        // Set crescent parameters
+        const centerX = 40;  // Adjusted to canvas size
+        const centerY = 40;  // Adjusted to canvas size
+        const outerRadius = 30;
+        const innerRadius = 20;
+        
+        // Draw the outer white circle
+        crescentCtx.beginPath();
+        crescentCtx.arc(centerX, centerY, outerRadius, 0, Math.PI * 2); 
+        crescentCtx.fillStyle = 'white';
+        crescentCtx.fill();
+        
+        // Draw the inner red circle
+        crescentCtx.beginPath();
+        crescentCtx.arc(centerX + 15, centerY, innerRadius, 0, Math.PI * 2);
+        crescentCtx.fillStyle = '#EF3340';
+        crescentCtx.fill();
+
+        // Star Drawing
+        const starCanvas = document.getElementById("myCanvas");
+        starCanvas.width = 50;
+        starCanvas.height = 50;
+        const starCtx = starCanvas.getContext("2d");
+
+        // Draw the star shape
+        starCtx.beginPath();
+        starCtx.moveTo(25, 0);
+        starCtx.lineTo(20, 10);
+        starCtx.lineTo(10, 4);
+        starCtx.lineTo(15, 14);
+        starCtx.lineTo(5, 18);
+        starCtx.lineTo(15, 21);
+        starCtx.lineTo(10, 31);
+        starCtx.lineTo(20, 27);
+        starCtx.lineTo(25, 37);
+        starCtx.lineTo(30, 27);
+        starCtx.lineTo(40, 31);
+        starCtx.lineTo(35, 21);
+        starCtx.lineTo(45, 18);
+        starCtx.lineTo(35, 14);
+        starCtx.lineTo(40, 4);
+        starCtx.lineTo(30, 10);
+        starCtx.lineTo(25, 0);
+        
+        // Fill the star with white
+        starCtx.fillStyle = "#FFFFFF";
+        starCtx.fill();
+        
+        // Stroke the star outline
+        starCtx.strokeStyle = "#FFFFFF";
+        starCtx.stroke();
+    </script>
+</body>
+</html>

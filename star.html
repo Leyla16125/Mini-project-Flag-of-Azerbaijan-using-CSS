@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="500" height="500" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML canvas tag.</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+// Start the path for the star
+ctx.beginPath();
+
+// Draw the star shape
+ctx.moveTo(250, 0);
+ctx.lineTo(200, 100);
+ctx.lineTo(100, 40);
+ctx.lineTo(150, 140);
+ctx.lineTo(50, 180);
+ctx.lineTo(150, 210);
+ctx.lineTo(100, 310);
+ctx.lineTo(200, 270);
+ctx.lineTo(250, 370);
+ctx.lineTo(300, 270);
+ctx.lineTo(400, 310);
+ctx.lineTo(350, 210);
+ctx.lineTo(450, 180);
+ctx.lineTo(350, 140);
+ctx.lineTo(400, 40);
+ctx.lineTo(300, 100);
+ctx.lineTo(250, 0);
+
+// Set fill color to white and fill the star
+ctx.fillStyle = "#FFFFFF";
+ctx.fill();
+
+// Stroke the star outline
+ctx.stroke();
+</script>
+
+</body>
+</html>
+
